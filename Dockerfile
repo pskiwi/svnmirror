@@ -11,4 +11,6 @@ COPY passwd /repo/conf/
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh /repo/hooks/start-commit /repo/hooks/pre-revprop-change
 
+VOLUME /repo
+
 ENTRYPOINT ["/entrypoint.sh"]
